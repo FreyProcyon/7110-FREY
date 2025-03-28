@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UQ Bus Stop Mood Tracker</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      padding: 2rem;
+      max-width: 600px;
+      margin: auto;
+    }
+    h1 {
+      text-align: center;
+      color: #4b0082;
+    }
+    p {
+      line-height: 1.6;
+    }
+    .form-section {
+      background-color: #fff;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      margin-top: 2rem;
+    }
+    label {
+      display: block;
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+    input, textarea, select {
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0.5rem;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    button {
+      margin-top: 1rem;
+      padding: 0.6rem 1.2rem;
+      background-color: #4b0082;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #36005e;
+    }
+  </style>
+</head>
+<body>
+  <h1>UQ Bus Stop Mood Tracker</h1>
+  <p>Please fill in this short mood log while you wait at the UQ Lakes bus stop. You can use emoji or words to describe how you're feeling. There are no right or wrong answers!</p>
+
+  <div class="form-section">
+    <form action="https://formspree.io/f/moodtracker" method="POST">
+      <label for="time">What time is it?</label>
+      <input type="time" id="time" name="time" required>
+
+      <label for="mood">How are you feeling? (Emoji or word)</label>
+      <input type="text" id="mood" name="mood" placeholder="😐 or Tired" required>
+
+      <label for="reason">Why do you feel that way? (Optional)</label>
+      <textarea id="reason" name="reason" rows="4" placeholder="E.g., Bus is late, weather is nice..."></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+</html>
